@@ -1,3 +1,5 @@
+{% load widget_tweaks %}
+
 <body>
 <div id="container" class="container">
 		<!-- FORM SECTION -->
@@ -23,14 +25,14 @@
 							<input type="password" placeholder="Confirm password">
 						</div>
 						<button>
-							Sign up
+							ثبت نام
 						</button>
 						<p>
 							<span>
-								Already have an account?
+								حسابی دارید؟
 							</span>
 							<b onclick="toggle()" class="pointer">
-								Sign in here
+								از اینجا وارد شوید
 							</b>
 						</p>
 					</div>
@@ -42,28 +44,41 @@
 			<div class="col align-items-center flex-col sign-in">
 				<div class="form-wrapper align-items-center">
 					<div class="form sign-in">
+					{% if form.non_field_errors %}
+					<div class="errors">
+						{% for error in form.non_field_errors %}
+							<p style= "color:red; font-size-adjust: 0.7"> {{error}} </p>
+						
+						{% endfor %}
+					
+					</div>
+					{% endif %}
+						<form method= "post"> {% csrf_token %}
 						<div class="input-group">
-							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username">
+							<i class='bx bxs-user'><p>نام کاربری</p></i>
+							
+							 {{form.username}}
+							
 						</div>
 						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Password">
+							<i class='bx bxs-lock-alt'><p>رمز ورود</p></i>
+							{{form.password}}
+							
 						</div>
 						<button>
-							Sign in
+							ورود
 						</button>
 						<p>
 							<b>
-								Forgot password?
+								رمزتان را فراموش کردید؟
 							</b>
 						</p>
 						<p>
 							<span>
-								Don't have an account?
+								حسابی ندارید؟
 							</span>
 							<b onclick="toggle()" class="pointer">
-								Sign up here
+								از اینجا وارد شوید
 							</b>
 						</p>
 					</div>
@@ -81,7 +96,7 @@
 			<div class="col align-items-center flex-col">
 				<div class="text sign-in">
 					<h2>
-						Welcome
+						خوش آمدید
 					</h2>
 	
 				</div>
@@ -97,7 +112,7 @@
 				</div>
 				<div class="text sign-up">
 					<h2>
-						Join with us
+						به ما ملحق شوید
 					</h2>
 	
 				</div>
@@ -110,8 +125,8 @@
 <style>
 
 :root {
-    --primary-color: #4EA685;
-    --secondary-color: #57B894;
+    --primary-color: #D61C4E;
+    --secondary-color: #F77E21;
     --black: #000000;
     --white: #ffffff;
     --gray: #efefef;
@@ -123,10 +138,10 @@
     --insta-color: #E1306C;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://v1.fontapi.ir/css/IranNastaliq');
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: IranNastaliq !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -186,7 +201,7 @@ body {
 .input-group i {
     position: absolute;
     top: 50%;
-    left: 1rem;
+    right: 1rem;
     transform: translateY(-50%);
     font-size: 1.4rem;
     color: var(--gray-2);
@@ -454,6 +469,11 @@ body {
         font-size: 2rem;
     }
 }
+.userplaceholder{
+	placeholder:"نام کاربری";
+}
+
+
 </style>
 	
 <script>
