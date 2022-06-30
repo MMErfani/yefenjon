@@ -4,12 +4,15 @@ from account.models import User
 
 # Create your views here.
 def index(request):
-	context = {}
+    context = {}
    
-	return render(request, 'donate/index.html', context)
+    return render(request, 'donate/index.html', context)
 
 
-def donatePage(request, int):
-	
-	
-	return render(request, 'donate/donate.html')
+def donatePage(request, prof_id):
+    context = {
+       'page' : get_object_or_404(User, prof_id=prof_id)
+    }
+    
+    
+    return render(request, 'donate/donate.html', context)
