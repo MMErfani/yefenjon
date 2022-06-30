@@ -31,7 +31,7 @@
         <header class="py-5 bg-image-full" style="background-image: url('{% static 'donate/assets2/img/1.jpg' %}')">
             <div class="text-center my-5">
                 <img class="img-fluid rounded-circle mb-4" src="{% static 'donate/assets2/img/2.jpg' %}" alt="..." />
-                <h1 class="text-white fs-3 fw-bolder">Full Width Pics</h1>
+                <h1 class="text-white fs-3 fw-bolder">{{info.get_full_name}}</h1>
                 <p class="text-white-50 mb-0">Landing Page Template</p>
             </div>
         </header>
@@ -57,4 +57,18 @@
         <!-- Core theme JS-->
         <script src="{% static 'donate/js2/scripts.js' %}"></script>
     </body>
+<style>
+@import url('https://v1.fontapi.ir/css/IranNastaliq');
+body{
+	
+	direction:rtl !important;
+	text-align: right !important;
+	font-family: IranNastaliq !important;
+}
+.myfont {
+		
+font-family: IranNastaliq !important;
+}
+
+</style>
 </html>

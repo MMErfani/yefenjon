@@ -9,9 +9,9 @@ def index(request):
     return render(request, 'donate/index.html', context)
 
 
-def donatePage(request, prof_id):
+def donatePage(request, username):
     context = {
-       'page' : get_object_or_404(User, prof_id=prof_id)
+       'info' : get_object_or_404(User, username=username)
     }
     
     
