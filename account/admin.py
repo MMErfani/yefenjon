@@ -6,7 +6,7 @@ from .models import User
 UserAdmin.fieldsets[2][1]['fields'] = (
                                         "is_active",
                                         "is_staff",
-                                        "prof_id",
+                                        "job",
                                         "card_number",
                                         "avatar",
                                         "is_superuser",
