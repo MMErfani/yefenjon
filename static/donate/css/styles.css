@@ -585,7 +585,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 250px;
+  max-width: 100%;
   height: auto;
 }
 
@@ -3016,7 +3016,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #ffc800;
+  background-color: #D61C4E !important;
   border-color: #ffc800;
 }
 .btn-primary:hover {
@@ -3040,7 +3040,7 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #ffc800;
+  background-color: #D61C4E;
   border-color: #ffc800;
 }
 
