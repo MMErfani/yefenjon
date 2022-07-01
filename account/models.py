@@ -9,3 +9,4 @@ class User(AbstractUser):
 	job = models.CharField(max_length=250, verbose_name="شغل / حرفه", default="")
 	wallet = models.IntegerField(verbose_name="کیف پول", default=0)
 	
+
