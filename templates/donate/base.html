@@ -32,8 +32,9 @@
         <header class="py-5 bg-image-full" style="background-image: url('{% static 'donate/assets2/img/1.jpg' %}')">
             <div class="text-center my-5">
                 <img class="img-fluid rounded-circle mb-4" src="/media/{{info.avatar}}" alt="..." />
-                <h1 class="text-white fs-3 fw-bolder">{{info.get_full_name}}</h1>
-                <p class="m-0 text-center text-white" style="font-size-adjust:0.7;text-shadow:1px 1px 2px #20c997;">{{info.job}}</p>
+                <h1 class="text-white fs-3 fw-bolder">{{info.get_full_name}} \ {{info.job}} \</h1>
+                <a class="btn btn-primary btn-xl text-uppercase myfont" href="#donate">یه فنجون مهمونش کن</a>
+                               
             </div>
         </header>
         <!-- Content section-->
