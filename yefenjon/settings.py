@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-LOGIN_REDIRECT_URL = "account:home"
+LOGIN_REDIRECT_URL = "account:Profile"
 LOGIN_URL = "account:login"
 LOGOUT_REDIRECT_URL = "account:login"
 

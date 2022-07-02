@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import User
 from django.views.generic import UpdateView
 from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView, PasswordChangeView
 
 # Create your views here.
     
@@ -15,3 +16,6 @@ class Profile(LoginRequiredMixin, UpdateView):
 	
 	def get_object(self):
 		return User.objects.get(pk = self.request.user.pk)
+
+class PasswordChange(PasswordChangeView):
+	success_url = reverse_lazy('account:Profile')

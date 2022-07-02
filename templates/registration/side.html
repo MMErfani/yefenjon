@@ -16,7 +16,7 @@
           <img src="/media/{{user.avatar}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{user.get_full_name}}</a>
+          <a href="/donate/{{user.username}}" class="d-block">{{user.get_full_name}}</a>
         </div>
       </div>
 
@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="/account/" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 داشبورد
@@ -34,9 +34,15 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/account/" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>ویرایش اطلاعات کاربری</p>
+                </a>
+              </li>
 
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-th"></i>
                   <p>درخواست واریز | پشتیبانی</p>
                 </a>
