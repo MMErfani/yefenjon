@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views
-from .views import home, EditProfile
+from .views import Profile
 
 app_name = "account"
 
@@ -30,6 +30,5 @@ urlpatterns = [
 
 
 urlpatterns += [
-    path('', home, name='home'),
-    path('edit-profile/', EditProfile.as_view(), name='EditProfile'),
+    path('', Profile.as_view(), name='Profile'),
 ]
