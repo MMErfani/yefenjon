@@ -26,8 +26,8 @@ urlpatterns = [
 	path('', include('donate.urls')),
     path('admin/', admin.site.urls),
     path('bankgateways/', az_bank_gateways_urls()),
-    path('go-to-gateway/', go_to_gateway_view),
-    path('callback-gateway/', callback_gateway_view),
+    path('go-to-gateway/<str:donate_to>/<int:amount>/', go_to_gateway_view),
+    path('callback-gateway/<str:donate_to>/<int:amount>/', callback_gateway_view),
         
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
