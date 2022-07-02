@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'azbankgateways',
     'peyment',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
