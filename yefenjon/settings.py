@@ -156,7 +156,7 @@ DJANGO_SETTINGS_MODULE='mysite.settings'
 AZ_IRANIAN_BANK_GATEWAYS = {
    'GATEWAYS': {
        'IDPAY': {
-           'MERCHANT_CODE': '*****************',
+           'MERCHANT_CODE': 'fb421fa2-7782-4c3f-b84c-9c1a190de534',
            'METHOD': 'POST',  # GET or POST
            'X_SANDBOX': 1,  # 0 disable, 1 active
        },

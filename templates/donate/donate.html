@@ -8,7 +8,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'donate/css3/styles.css' %}" rel="stylesheet" />
    
-
+		<link href="{% static 'donate/css3/styles2.css' %}" rel="stylesheet" />
         <!-- Section-->
         <section class="py-5" id="donate">
             <div class="container px-4 px-lg-5 mt-5">
@@ -33,7 +33,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">مهمون من</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto portfolio-link" data-bs-toggle="modal" href="#Modal1">مهمون من</a></div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">مهمون من</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto portfolio-link" data-bs-toggle="modal" href="#Modal2">مهمون من</a></div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">مهمون من</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto portfolio-link" data-bs-toggle="modal" href="#Modal3">مهمون من</a></div>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">مهمون من</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto portfolio-link" data-bs-toggle="modal" href="#Modal4">مهمون من</a></div>
                             </div>
                         </div>
                     </div>
@@ -131,6 +131,129 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{% static 'donate/js3/scripts.js' %}"></script>
-
+        <!--  modal popup1 -->
+        <div class="portfolio-modal modal fade" id="Modal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'donate/assets3/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    ***
+                                        <li>
+                                            <strong>برای:</strong>
+                                            {{info.get_full_name}}
+                                        </li>
+                                        <li>
+                                            <strong>با فعالیت:</strong>
+                                            {{info.job}}
+                                        </li>
+                                    </ul>
+                                    
+                                    <a href= "#"><button class="btn btn-primary text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>پرداخت</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--  modal popup2 -->
+        <div class="portfolio-modal modal fade" id="Modal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'donate/assets3/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    ***
+                                        <li>
+                                            <strong>برای:</strong>
+                                            {{info.get_full_name}}
+                                        </li>
+                                        <li>
+                                            <strong>با فعالیت:</strong>
+                                            {{info.job}}
+                                        </li>
+                                    </ul>
+                                    
+                                    <a href= "#"><button class="btn btn-primary text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>پرداخت</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--  modal popup3 -->
+        <div class="portfolio-modal modal fade" id="Modal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'donate/assets3/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    ***
+                                        <li>
+                                            <strong>برای:</strong>
+                                            {{info.get_full_name}}
+                                        </li>
+                                        <li>
+                                            <strong>با فعالیت:</strong>
+                                            {{info.job}}
+                                        </li>
+                                    </ul>
+                                    
+                                    <a href= "#"><button class="btn btn-primary text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>پرداخت</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--  modal popup4 -->
+        <div class="portfolio-modal modal fade" id="Modal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'donate/assets3/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    ***
+                                        <li>
+                                            <strong>برای:</strong>
+                                            {{info.get_full_name}}
+                                        </li>
+                                        <li>
+                                            <strong>با فعالیت:</strong>
+                                            {{info.job}}
+                                        </li>
+                                    </ul>
+                                    
+                                    <a href= "#"><button class="btn btn-primary text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>پرداخت</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
 {% endblock %}
 
