@@ -4,11 +4,11 @@
 
 ## TODO 📝
 - [x] first page
-- [ ] donate page
+- [x] donate page
 - [ ] content of dashboard
 - [x] login
 - [ ] signup 
 - [ ] email verification
-- [ ] edit profile access
+- [x] edit profile access
 
 #### Your PRs make us so happy 😊
