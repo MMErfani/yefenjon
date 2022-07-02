@@ -17,10 +17,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from azbankgateways.urls import az_bank_gateways_urls
+from peyment.views import go_to_gateway_view, callback_gateway_view
+
+admin.autodiscover()
 urlpatterns = [
 	path('account/', include('account.urls')),
 	path('', include('donate.urls')),
     path('admin/', admin.site.urls),
+    path('bankgateways/', az_bank_gateways_urls()),
+    path('go-to-gateway/', go_to_gateway_view),
+    path('callback-gateway/', callback_gateway_view),
         
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
