@@ -16,6 +16,3 @@ class Profile(LoginRequiredMixin, UpdateView):
 	
 	def get_object(self):
 		return User.objects.get(pk = self.request.user.pk)
-
-class PasswordChange(PasswordChangeView):
-	success_url = reverse_lazy('account:Profile')

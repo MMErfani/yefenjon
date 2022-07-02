@@ -18,8 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 LOGIN_REDIRECT_URL = "account:Profile"
-LOGIN_URL = "account:login"
-LOGOUT_REDIRECT_URL = "account:login"
+LOGIN_URL = "login"
+LOGOUT_REDIRECT_URL = "login"
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -144,13 +145,13 @@ AUTH_USER_MODEL = 'account.User'
 # in cmd/file:
 # from django.core.mail import send_mail
 # send_mail(sub, mass, se, [recipcie],fail_silently=False)
-EMAIL_HOST= "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "amirho33einy1234@gmail.com"
-EMAIL_HOST_PASSWORD = "13861386m"
-EMAIL_USE_TLS = True
+#EMAIL_HOST= "smtp.gmail.com"
+#EMAIL_PORT = 587
+#EMAIL_HOST_USER = "amirho33einy1234@gmail.com"
+#EMAIL_HOST_PASSWORD = "13861386m"
+#EMAIL_USE_TLS = True
 # EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DJANGO_SETTINGS_MODULE='mysite.settings'
 
 #=============payment=====

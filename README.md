@@ -5,10 +5,14 @@
 ## TODO 📝
 - [x] first page
 - [x] donate page
-- [ ] content of dashboard
+- [x] content of dashboard
 - [x] login
 - [ ] signup 
+- [ ] contact us form in panel
+- [ ] * upgrade wallet
 - [ ] email verification
 - [x] edit profile access
+- [ ] deploy
+- [ ] cloudflare
 
 #### Your PRs make us so happy 😊
