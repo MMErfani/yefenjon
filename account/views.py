@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+#from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import User
 from django.views.generic import UpdateView
 from django.urls import reverse_lazy
 
 # Create your views here.
     
-class Profile(UpdateView):
+class Profile(LoginRequiredMixin, UpdateView):
 	model = User
 	fields = ['first_name', 'last_name', 'username', 'email', 'card_number','avatar','job']
 	template_name = 'registration/home.html'
