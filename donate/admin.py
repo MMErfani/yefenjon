@@ -5,6 +5,6 @@ from .models import donate
 @admin.register(donate)
 class donateAdmin(admin.ModelAdmin):
     list_display = ('amount', 'donate_to','name',"payment_status")
-    list_filter = ('payment_status',)
+    list_filter = ('payment_status','date')
     search_fields = ('name', 'donate_to')
     
