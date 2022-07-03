@@ -16,7 +16,13 @@
           <img src="/media/{{user.avatar}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/donate/{{user.username}}" class="d-block">{{user.get_full_name}}</a>
+          <a href="/donate/{{user.username}}" class="d-block">
+          {% if user.get_full_name %}
+          	{{user.get_full_name}}
+          {% else %}
+          	{{user.username}}
+          {% endif %}
+          </a>
         </div>
       </div>
 
