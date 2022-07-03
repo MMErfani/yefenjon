@@ -61,28 +61,30 @@
 							
 						</div>
 						<div class="input-group">
+							<i class='bx bxs-user'><p>ایمیل</p></i>
+							
+							 {{form.email}}
+							
+						</div>						
+						<div class="input-group">
 							<i class='bx bxs-lock-alt'><p>رمز ورود</p></i>
-							{{form.password}}
+							{{form.password1}}
+							
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'><p>تایید رمز ورود</p></i>
+							{{form.password2}}
 							
 						</div>
 						<button>
-							ورود
+							ثبت نام
 						</button>
-						<a href="{% url 'password_reset' %}"><p>
+						<a href="{% url 'login' %}"><p>
 							<b>
-								رمزتان را فراموش کردید؟
+								حسابی دارید؟ وارد شوید
 							</b>
 						</a></p>
-						<p>
-							<span>
-								حسابی ندارید؟
-							</span>
-							<a href="/register/">
-							<b>
-								از اینجا ثبت نام کنبد
-							</b>
-							</a>
-						</p>
+
 					</div>
 				</div>
 				<div class="form-wrapper">
@@ -98,7 +100,7 @@
 			<div class="col align-items-center flex-col">
 				<div class="text sign-in">
 					<h2>
-						خوش آمدید
+						به ما ملحق شوید
 					</h2>
 	
 				</div>
