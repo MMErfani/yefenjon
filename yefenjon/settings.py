@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,8 +27,7 @@ LOGOUT_REDIRECT_URL = "login"
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h-y$p0at+m7w!t6jxk1qrnn!#75qp2wpkqn)tt9r#(o3yewg$_'
-
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -145,13 +145,13 @@ AUTH_USER_MODEL = 'account.User'
 # in cmd/file:
 # from django.core.mail import send_mail
 # send_mail(sub, mass, se, [recipcie],fail_silently=False)
-#EMAIL_HOST= "smtp.gmail.com"
-#EMAIL_PORT = 587
-#EMAIL_HOST_USER = "amirho33einy1234@gmail.com"
-#EMAIL_HOST_PASSWORD = "13861386m"
-#EMAIL_USE_TLS = True
-# EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST= config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# / ======================
 DJANGO_SETTINGS_MODULE='mysite.settings'
 
 #=============payment=====
