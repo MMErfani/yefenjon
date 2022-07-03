@@ -50,9 +50,9 @@ def callback_gateway_view(request,donate_to,amount):
         
         # پرداخت با موفقیت انجام پذیرفته است و بانک تایید کرده است.
         # می توانید کاربر را به صفحه نتیجه هدایت کنید یا نتیجه را نمایش دهید.
-        return HttpResponse("پرداخت با موفقیت انجام شد.")
+        return render(request, 'peyment/success.html')
     d = donate(donate_to=donate_to,amount=amount,payment_status=False)
     d.save()
 
     # پرداخت موفق نبوده است. اگر پول کم شده است ظرف مدت ۴۸ ساعت پول به حساب شما بازخواهد گشت.
-    return HttpResponse("پرداخت با شکست مواجه شده است. اگر پول کم شده است ظرف مدت ۴۸ ساعت پول به حساب شما بازخواهد گشت.")
+    return render(request, 'peyment/failed.html')
