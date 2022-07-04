@@ -7,7 +7,7 @@
 - [x] donate page
 - [x] content of dashboard
 - [x] login
-- [ ] signup 
+- [x] signup 
 - [ ] contact us form in panel
 - [ ] * upgrade wallet
 - [ ] email verification
