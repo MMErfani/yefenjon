@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from azbankgateways import bankfactories, models as bank_models, default_settings as settings
 from azbankgateways.exceptions import AZBankGatewaysException
 from django.http import HttpResponse, Http404
 from donate.models import donate
-
+from account.models import User
 
 def go_to_gateway_view(request,donate_to,amount):
     # خواندن مبلغ از هر جایی که مد نظر است
@@ -48,7 +48,9 @@ def callback_gateway_view(request,donate_to,amount):
         try:
             d = donate(donate_to=donate_to,amount=amount,payment_status=True,tracking_code=tracking_code)
             d.save()
-            
+            U = get_object_or_404(User, username=donate_to)
+            U.wallet += amount
+            U.save()
             # پرداخت با موفقیت انجام پذیرفته است و بانک تایید کرده است.
             # می توانید کاربر را به صفحه نتیجه هدایت کنید یا نتیجه را نمایش دهید.
             return render(request, 'peyment/success.html')

@@ -9,8 +9,8 @@
 - [x] login
 - [x] signup 
 - [ ] contact us form in panel
-- [ ] * upgrade wallet
-- [ ] email verification
+- [x] * upgrade wallet
+- [x] email verification
 - [x] edit profile access
 - [ ] deploy
 - [ ] cloudflare
