@@ -49,7 +49,7 @@ class Register(CreateView):
         to_email = form.cleaned_data.get('email')
         email = EmailMessage(mail_subject, message, to=[to_email])
         email.send()
-        return HttpResponse('لینک فعال سازی به ایمیل شما ارسال شد.<a href="/login">ورود</a>')
+        return redirect("/register/done/")
         
 def activate(request, uidb64, token):
     try:
@@ -62,6 +62,11 @@ def activate(request, uidb64, token):
         user.save()
         login(request, user)
         # return redirect('home')
-        return HttpResponse('اکانت شما با موفقیت فعال شد. برای ادامه <a href="/account/">کلیک</a> کنید.')
+        return redirect("/account/")
     else:
-        return HttpResponse('این لینک منقضی شده است!<a href="/register/">دوباره امتحان کنید.</a>')
+        return redirect("/register/failed/")# HttpResponse('این لینک منقضی شده است!<a href="/register/">دوباره امتحان کنید.</a>')
+def registerdone(request):
+	return render(request, 'registration/registerdone.html')
+
+def registerfailed(request):
+	return render(request, 'registration/registerfailed.html')

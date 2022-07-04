@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from azbankgateways.urls import az_bank_gateways_urls
 from peyment.views import go_to_gateway_view, callback_gateway_view
 from django.contrib.auth import views
-from account.views import Register, activate
+from account.views import Register, activate, registerdone, registerfailed
 admin.autodiscover()
 urlpatterns = [
     path('', include('donate.urls')),
@@ -28,6 +28,8 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path("login/", views.LoginView.as_view(), name="login"),
     path("register/", Register.as_view(), name="register"),
+    path("register/done/", registerdone, name="registerdone"),
+    path("register/failed/", registerdone, name="registerfailed"),
     path('activate/<uidb64>/<token>/',activate, name='activate'),
     path('admin/', admin.site.urls),
     path('bankgateways/', az_bank_gateways_urls()),
