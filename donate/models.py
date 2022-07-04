@@ -11,3 +11,4 @@ class donate(models.Model):
 	donate_to = models.CharField(max_length=250, verbose_name="پرداخت به")
 	date = models.DateTimeField(default=timezone.now, verbose_name="تاریخ و زمان")
 	payment_status = models.BooleanField(default=False, verbose_name="وضعیت پرداخت")
+	tracking_code = models.IntegerField(unique=True,verbose_name="کد پیگیری")
