@@ -1,6 +1,6 @@
 # yefenjon
 یه فنجون قهوه مهمانش کن | سیستم حمایت (donate system)
-یه پروژه جنگجویی که داره به جاهای خوبی می‌رسه
+یه پروژه جنگجویی
 
 ## TODO 📝
 - [x] first page
@@ -12,9 +12,9 @@
 - [x] Add a payment gateway
 - [x] email verification
 - [x] edit profile access
-- [ ] contact us form in panel
-- [ ] Check username in payment 'go to gateway link'
-- [ ] test deployment on a server
+- [x] Check username in payment 'go to gateway link'
+- [x] test deployment on a server
+- [ ] ** contact us form in panel
 - [ ] deploy
 - [ ] cloudflare
 
