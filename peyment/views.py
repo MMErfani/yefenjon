@@ -6,6 +6,8 @@ from donate.models import donate
 from account.models import User
 
 def go_to_gateway_view(request,donate_to,amount):
+
+    get_object_or_404(User, username=donate_to)
     # خواندن مبلغ از هر جایی که مد نظر است
     #amount = 50000
     # تنظیم شماره موبایل کاربر از هر جایی که مد نظر است
